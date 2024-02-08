@@ -1,0 +1,22 @@
+server:
+  context-path: /api-sample
+  port: 9999
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: ''
+    show-sql: true
+    url: jdbc:h2:mem:ApiSample
+    username: sa
+  h2:
+    console:
+      enabled: true
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+  http:
+    encoding:
+      charset: UTF-8
